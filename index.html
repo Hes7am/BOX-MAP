@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoxMap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div><img src="boxmap.png" class="logo"></div>
+        <div id="headerContent">
+            <input type="text" id="bordNaam" placeholder="Voer bordnaam in">
+            <button id="toevoegBordBtn">Voeg Bord Toe</button>
+            <button id="verwijderAlleBtn">Verwijder Alle Borden</button>
+            <button id="toevoegKolomBtn">Voeg Kolom Toe</button>
+        </div>
+    </header>
+
+    <div id="kolommenContainer">
+        <div class="kolom" id="kolom1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2 ondblclick="pasKolomTitelAan(this)">Proces stappen 1 <span class="verwijder-kolom" onclick="verwijderKolom('kolom1')">X</span></h2>
+            <div class="bord-lijst" id="bordLijst1"></div>
+        </div>
+        <div class="kolom" id="kolom2" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2 ondblclick="pasKolomTitelAan(this)">Proces stappen 2 <span class="verwijder-kolom" onclick="verwijderKolom('kolom2')">X</span></h2>
+            <div class="bord-lijst" id="bordLijst2"></div>
+        </div>
+        <div class="kolom" id="kolom3" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2 ondblclick="pasKolomTitelAan(this)">Proces stappen 3 <span class="verwijder-kolom" onclick="verwijderKolom('kolom3')">X</span></h2>
+            <div class="bord-lijst" id="bordLijst3"></div>
+        </div>
+        <div class="kolom" id="kolom4" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2 ondblclick="pasKolomTitelAan(this)">Proces stappen 4 <span class="verwijder-kolom" onclick="verwijderKolom('kolom4')">X</span></h2>
+            <div class="bord-lijst" id="bordLijst4"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <footer class="site-footer">
+        <div class="footer-content">
+          <p>© 2024 Nomad IT. Alle rechten voorbehouden. Website gemaakt door <a href="https://heshammurshed.com/">Hesham Murshed</a></p>
+        </div>
+    </footer>
+</body>
+</html>
